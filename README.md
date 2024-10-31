@@ -16,3 +16,5 @@ Ce dépôt utilise les branches suivantes :
 - **main** : Branche principale du projet, stable et prête pour la production.
 - **dev** : Branche de développement où toutes les nouvelles fonctionnalités et les modifications seront effectuées avant d'être fusionnées dans la branche principale.
 
+PORTFOLIO visuel :  
+https://safidial.github.io/portfolio-bts-sio-slam-2024-2025/
