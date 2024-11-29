@@ -1,19 +1,28 @@
-# Portfolio BTS SIO SLAM 2024-2025
 
-Bienvenue dans le projet de portfolio pour le BTS SIO, spécialité SLAM, pour l'année 2024-2025. Ce dépôt contient les ressources et le code pour créer un portfolio en ligne.
+# 🌐 Portfolio BTS SIO SLAM 🎓
 
+Ce portfolio présente mes réalisations dans le cadre de ma formation en **BTS SIO**,
+option **SLAM** (Solutions Logicielles et Applications Métiers).
 
-## Fichiers Importants
+## 📁 Structure du projet
 
-- **index.html** : La page principale du portfolio. C'est ici que le contenu principal sera affiché.
-- **css/reset.css** : Fichier CSS pour réinitialiser les styles par défaut du navigateur.
-- **css/style.css** : Fichier CSS principal pour les styles personnalisés du portfolio.
+- **index.html** 📝 : Fichier principal qui structure la page d'accueil.
+- **css/style.css** 🎨 : Fichier de style qui gère l'apparence du site.
+- **images/** 🖼️ : Dossier contenant toutes les images utilisées.
+- **js/script.js** ⚙️ : Fichier JavaScript pour l'interactivité du site.
 
-## Branches
+## 🚀 Fonctionnalités
 
-Ce dépôt utilise les branches suivantes :
+- **Présentation personnelle** 👤 : Mes compétences et mon parcours.
+- **Projets réalisés** 💻 : Une galerie de mes projets avec des descriptions.
+- **Navigation fluide** 🧭 : Un menu permettant d'accéder aux différentes sections.
+- **Interactivité** ✨ : Animations et effets visuels pour rendre le site plus dynamique.
 
-- **main** : Branche principale du projet, stable et prête pour la production.
-- **dev** : Branche de développement où toutes les nouvelles fonctionnalités et les modifications seront effectuées avant d'être fusionnées dans la branche principale.
+## 🛠️ Technologies utilisées
+
+- **HTML** 🧑‍💻 pour la structure.
+- **CSS** 🎨 pour le design.
+- **JavaScript** ⚡ pour l'interactivité.
+
 
 [Publication du portfolio](https://safidial.github.io/portfolio-bts-sio-slam-2024-2025/)

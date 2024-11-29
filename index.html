@@ -1,161 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Safiatou Diallo, étudiante en développement informatique et passionnée de technologies.">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Mon Portfolio | Safiatou Diallo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Portfolio - Safiatou Diallo</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+    <!-- Barre de navigation -->
     <header>
-        <div class="logo-container">
-            <!--******************************** mon logo ************************************************** -->
-            <img src="path/to/ton-logo.png" alt="Logo de Safiatou Diallo" class="logo">
-            <h1 class="portfolio-title"> Mon Portfolio</h1>
-        </div>
-        <nav>
-            <!--******************************** navigation ************************************************** -->
-            <ul>
-                <li><a href="#about" aria-label="À propos de moi">À propos</a></li>
-                <li><a href="#projects" aria-label="Mes projets">Projets</a></li>
-                <li><a href="#experience" aria-label="Mes expériences professionnelles">Expériences</a></li>
-                <li><a href="#formation" aria-label="Mes formations">Formation</a></li> 
-                <li><a href="#contact" aria-label="Me contacter">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-
-    <main>
-        <!--******************************** section à propos ********************************************* -->
-        <section id="about">
-            <h2> Bonjour, je suis Safiatou Diallo</h2>
-            <p>Étudiante en Développement Informatique | Fullstack Developer</p>
-
-            <h3>À propos de moi</h3>
-            <p>Je m'appelle Safiatou Diallo, et je suis une passionnée de développement informatique, actuellement en formation intensive.</p>
-            
-            <h3>Passions et Objectifs</h3>
-            <p>J'aime relever des défis et explorer les nouvelles technologies. Je cherche une alternance à partir de septembre 2024 pour mettre en pratique mes compétences.</p>
-
-            <h3>Expérience Associative</h3>
-            <p>Membre actif du club Rootique de CESI et secrétaire national pour l’AEEGCI, j’ai développé des compétences en gestion de projets et leadership.</p>
-
-            <!--------------------------------- bouton pour voir le CV -------------------------------------- -->
-            <div class="cv-button-container">
-                <a href="Safiatou_cv.pdf" target="_blank" class="cv-button" aria-label="Télécharger mon CV">Voir mon CV</a>
+        <div class="navbar">
+            <div class="logo">Safiatou DIALLO</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#accueil" id="menu-accueil">Accueil</a></li>
+                    <li><a href="#about" id="menu-about">À propos</a></li>
+                    <li><a href="#projets" id="menu-projets">Projets</a></li>
+                    <li><a href="#experiences" id="menu-experiences">Expériences</a></li>
+                    <li><a href="#formation" id="menu-formation">Formation</a></li>
+                    <li><a href="#contact" id="menu-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-        </section>
+        </div>
+    </header>
 
+    <!-- Section Accueil -->
+    <section id="accueil">
+        <div class="content">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Je suis Safiatou DIALLO, étudiante en deuxième année de BTS SIO option SLAM.</p>
+            <br>
+            <a href="CV-Safiatou-DIALLO.pdf" class="btn" download>Télécharger mon CV</a>
+        </div>
+    </section>
 
-        <!--******************************** SECTION FORMATION ********************************************* -->
-        <section id="formation">
-            <h2>Formations</h2>
+    <!-- Section Sleek Scrolling Bar -->
+    <div class="sleek-scrolling-bar">
+        <p>🎓 Étudiante en deuxième année BTS SIO option SLAM. Explorer les nouvelles technologies et relever des défis
+            font partie de mes motivations principales. Je suis ouverte à diverses opportunités professionnelles :
+            stages, projets collaboratifs ou alternance, pour enrichir mes compétences et contribuer à des projets
+            innovants.</p>
+    </div>
 
-            <!------------------------------ BTS SERVICES INFORMATIQUES ------------------------------------- -->
-            <h4>BTS Services Informatiques aux Organisations, Option SLAM</h4>
-            <p>ITIC Paris, France</p>
-            <p>De 2024 à 2025</p>
+    <!-- Section À propos -->
+    <section id="about" class="main-content">
+        <div class="left-column">
+            <h2 class="small">À propos de moi</h2>
+            <h1 class="large">Je suis Safiatou, étudiante en deuxième année <span class="highlight">BTS SIO option
+                    SLAM</span>.</h1>
+            <p class="small">Explorer les nouvelles technologies et relever des défis font partie de mes motivations
+                principales. Je suis ouverte à diverses opportunités professionnelles, que ce soit des stages, des
+                projets collaboratifs, ou une alternance, pour enrichir mes compétences et contribuer à des projets
+                innovants.</p>
+            <div class="cta">
+                <button>Engagez-moi</button>
+                <div class="social-icons">
+                    <a href="https://github.com" target="_blank" class="icon github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="icon linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <img src="css/images/image.webp" alt="Image de Profil" class="profile-image">
+        </div>
+    </section>
 
-            <!------------------------------ 1ÈRE ANNÉE DÉVELOPPEMENT INFORMATIQUE --------------------------- -->
-            <h4>1ère année Développement Informatique</h4>
-            <p>CESI École d'Ingénieurs, Brest, France</p>
-            <p>De 2023 à 2024</p>
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
+        <h2>Mes Projets</h2>
+        <div class="projects-container">
+            <!-- Projet 1: Site Web de Restauration Rapide -->
+            <div class="project-card">
+                <img src="css/images/image.webp" alt="Site Web de Restauration Rapide" class="project-image">
+                <h3>Site Web de Restauration Rapide</h3>
+                <p class="project-description">Ce projet est un site web pour une entreprise fictive de restauration
+                    rapide, permettant aux clients de commander en ligne. L'interface est simple, claire et adaptée aux
+                    besoins des utilisateurs, avec un design moderne et responsive.</p>
+                <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                <a href="https://github.com/ton-github/projet-restauration" class="github-link" target="_blank">Voir sur GitHub</a>
+            </div>
 
-            <!------------------------------ LICENCE 1 INFORMATIQUE ----------------------------------------- -->
-            <h4>Licence 1 Informatique</h4>
-            <p>Institut Universitaire d'Abidjan (IUA), Abidjan, Côte d'Ivoire</p>
-            <p>De 2022 à 2023</p>
-
-            <!------------------------------ BAC ------------------------------------------------------------- -->
-            <h4>Baccalauréat Scientifique Série D</h4>
-            <p>Collège Victor-Schoelcher, Adjamé, Côte d'Ivoire</p>
-            <p>De 2020 à 2021</p>
-        </section>
-
-
-        <!--******************************** section projets *********************************************** -->
-        <section id="projects">
-            <h2>Projets en ligne</h2>
-
-            <!-------------------------------- projet : jeu casse brique ------------------------------------ -->
-            <article>
+            <!-- Projet 2: Jeu de Casse-Brique -->
+            <div class="project-card">
+                <img src="css/images/image.webp" alt="Jeu de Casse-Brique" class="project-image">
                 <h3>Jeu de Casse-Brique</h3>
-                <p>Ce projet est un jeu de casse-brique développé en C utilisant la bibliothèque SDL2.</p>
-                <ul>
-                    <li>Langage de Programmation : C</li>
-                    <li>Bibliothèque Graphique : SDL2 (Simple DirectMedia Layer 2)</li>
-                    <li>Fonctionnalités :
-                        <ul>
-                            <li>Détection des collisions entre la balle et les briques</li>
-                            <li>Gestion du mouvement de la raquette</li>
-                            <li>Points et niveaux</li>
-                        </ul>
-                    </li>
-                    <li>Environnement de Développement : Développé sur une machine Linux Debian</li>
-                </ul>
-            </article>
+                <p class="project-description">Ce projet est un jeu de casse-brique développé en C utilisant la
+                    bibliothèque SDL2. Il présente un design minimaliste avec une expérience de jeu fluide et des
+                    contrôles simples.</p>
+                <p><strong>Technologies utilisées :</strong> Langage C, SDL2, Linux Debian</p>
+                <a href="https://github.com/ton-github/projet-casse-brique" class="github-link" target="_blank">Voir sur GitHub</a>
+            </div>
 
-            <!-------------------------------- projet : site web de nettoyage ------------------------------ -->
-            <article>
+            <!-- Projet 3: Site Web de Nettoyage -->
+            <div class="project-card">
+                <img src="css/images/image.webp" alt="Site Web de Nettoyage" class="project-image">
                 <h3>Site Web de Nettoyage</h3>
-                <p>Ce projet est un site web pour une entreprise fictive de nettoyage.</p>
-                <ul>
-                    <li>HTML : Structure de la page</li>
-                    <li>CSS : Mise en forme et design</li>
-                    <li>JavaScript : Fonctionnalités interactives</li>
-                    <li>Bootstrap : Design réactif et composants</li>
-                    <li>PHP : Gestion des interactions côté serveur</li>
-                    <li>MySQL avec phpMyAdmin : Gestion de la base de données</li>
-                </ul>
-            </article>
+                <p class="project-description">Ce projet est un site web pour une entreprise fictive de nettoyage. Il
+                    comprend un formulaire de demande de service, des informations sur les services proposés, et une
+                    interface utilisateur intuitive.</p>
+                <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+                <a href="https://github.com/ton-github/projet-nettoyage" class="github-link" target="_blank">Voir sur GitHub</a>
+            </div>
 
-            <!-------------------------------- projet : application de suivi de candidatures ---------------- -->
-            <article>
-                <h3>Application de Suivi de Candidatures (en cours)</h3>
-                <p>Cette application permet de gérer les candidatures, planifier les entretiens, et consulter les rapports.</p>
-                <ul>
-                    <li>React : Pour la construction des composants et gestion des états.</li>
-                    <li>Styled-Components : Pour le styling des composants avec une approche CSS-in-JS.</li>
-                    <li>React-Big-Calendar : Pour l'affichage et la gestion des événements dans un calendrier.</li>
-                    <li>React Icons : Pour intégrer des icônes modernes et fonctionnelles.</li>
-                </ul>
-            </article>
-        </section>
+            <!-- Projet 4: Application de Suivi de Candidatures -->
+            <div class="project-card hidden">
+                <img src="css/images/image.webp" alt="Application de Suivi de Candidatures" class="project-image">
+                <h3>Application de Suivi de Candidatures</h3>
+                <p class="project-description">Cette application permet de gérer les candidatures, planifier les
+                    entretiens, et consulter les rapports. Elle est construite avec React pour offrir une expérience
+                    utilisateur réactive et moderne.</p>
+                <p><strong>Technologies utilisées :</strong> React, Styled-Components, React-Big-Calendar, React Icons</p>
+                <a href="https://github.com/ton-github/projet-suivi-candidatures" class="github-link" target="_blank">Voir sur GitHub</a>
+            </div>
 
+            <!-- Projet 5: Site Web de Fastfood -->
+            <div class="project-card hidden">
+                <img src="css/images/image.webp" alt="Site Web de Fastfood" class="project-image">
+                <h3>Site Web de Fastfood</h3>
+                <p class="project-description">Un site web pour une chaîne de fastfood fictive, permettant aux
+                    utilisateurs de naviguer à travers un menu interactif et de passer des commandes en ligne de
+                    manière rapide et efficace.</p>
+                <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript</p>
+                <a href="https://github.com/ton-github/projet-fastfood" class="github-link" target="_blank">Voir sur GitHub</a>
+            </div>
+        </div>
 
-        <!--******************************** section expériences professionnelles *************************** -->
-        <section id="experience">
-            <h2>Expériences Professionnelles</h2>
-            <article>
-                <h3>Juin - Août 2024</h3>
-                <p><strong>Développeuse Fullstack - VNB-IT</strong></p>
-                <p>Développement et optimisation d'applications web, mise en place du continuous delivery, administration de bases de données.</p>
-                <ul>
-                    <li>Développement de nouvelles fonctionnalités avec Node.js et React.</li>
-                    <li>Optimisation des performances d'applications web.</li>
-                    <li>Administration des bases de données MongoDB.</li>
-                    <li>Intégration de systèmes de notification en temps réel avec Socket.IO.</li>
-                </ul>
-            </article>
-        </section>
+        <button id="show-more-btn">Voir plus</button>
+    </section>
 
+    <!-- Section Expériences -->
+    <section id="experiences">
+        <!-- Contenu des expériences -->
+    </section>
 
-        <!--******************************** section contact *********************************************** -->
-        <section id="contact">
-            <h2>Contactez-moi</h2>
-            <p>Num Tel : <a href="tel:+33767116024">+33 7 67 11 60 24</a></p>
-            <p>Email : <a href="mailto:diallosafia75@gmail.com">diallosafia75@gmail.com</a></p>
-            <p>Github : <a href="https://github.com/SafiDial" target="_blank">github.com/SafiDial</a></p>
-            <p>LinkedIn : <a href="https://www.linkedin.com/in/votreprofil/" target="_blank">Mon profil LinkedIn</a></p> 
-        </section>
-    </main>
+    <!-- Section Formation -->
+    <section id="formation">
+        <!-- Contenu de la formation -->
+    </section>
 
-    <!--******************************** section pied de page ********************************************* -->
-    <footer>
-        <p>&copy; 2024 Safiatou Diallo - Portfolio BTS SIO SLAM</p>
-    </footer>
+    <!-- Section Contact -->
+    <section id="contact">
+        <!-- Contenu de la section Contact -->
+    </section>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
