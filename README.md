@@ -25,4 +25,4 @@ option **SLAM** (Solutions Logicielles et Applications Métiers).
 - **JavaScript** ⚡ pour l'interactivité.
 
 
-[Publication du portfolio](https://safidial.github.io/portfolio-bts-sio-slam-2024-2025/)
+[clique dessus pour voir la publication du portfolio](https://safidial.github.io/portfolio-bts-sio-slam-2024-2025/)
