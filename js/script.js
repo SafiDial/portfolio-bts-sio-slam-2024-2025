@@ -42,10 +42,6 @@ burger.addEventListener('click', () => {
 
 
 
-
-
-
-
   document.getElementById("show-more-btn").addEventListener("click", function() {
     const hiddenProjects = document.querySelectorAll(".project-card.hidden");
     
@@ -64,3 +60,62 @@ burger.addEventListener('click', () => {
 });
 
 
+
+
+
+
+
+  // Sélectionner tous les éléments de date et le conteneur de description
+  const dateBoxes = document.querySelectorAll('.date-box');
+  const descriptionDiv = document.getElementById('description');
+
+  // Fonction pour afficher la description et changer la couleur des ronds et des dates
+  dateBoxes.forEach((dateBox, index) => {
+    dateBox.addEventListener('click', () => {
+      // Réinitialiser la couleur des ronds et des dates
+      dateBoxes.forEach(box => {
+        box.querySelector('.dot').classList.remove('active');
+        box.querySelector('.date').classList.remove('active');
+      });
+
+      // Activer le rond et la date de l'élément cliqué
+      dateBox.querySelector('.dot').classList.add('active');
+      dateBox.querySelector('.date').classList.add('active');
+
+      // Ajouter une transition douce à la description
+      descriptionDiv.style.opacity = 0;
+      
+      setTimeout(() => {
+        // Afficher la nouvelle description et l'image
+        const imageUrl = dateBox.dataset.image;
+        const descriptionText = dateBox.dataset.description;
+        
+        descriptionDiv.innerHTML = `
+          <div class="description-image" style="background-image: url('${imageUrl}');">
+            <div class="date-on-image">${dateBox.querySelector('.date').textContent}</div>
+            <div class="description-text">${descriptionText}</div>
+          </div>
+        `;
+        
+        // Réapparaître en douceur
+        descriptionDiv.style.opacity = 1;
+      }, 300); // délai pour permettre la transition de disparition
+
+    });
+
+    // Si c'est le premier élément, on l'affiche par défaut au chargement
+    if (index === 0) {
+      dateBox.querySelector('.dot').classList.add('active');
+      dateBox.querySelector('.date').classList.add('active');
+      const imageUrl = dateBox.dataset.image;
+      const descriptionText = dateBox.dataset.description;
+      
+      descriptionDiv.innerHTML = `
+        <div class="description-image" style="background-image: url('${imageUrl}');">
+          <div class="date-on-image">${dateBox.querySelector('.date').textContent}</div>
+          <div class="description-text">${descriptionText}</div>
+        </div>
+      `;
+      descriptionDiv.style.opacity = 1;
+    }
+  });
