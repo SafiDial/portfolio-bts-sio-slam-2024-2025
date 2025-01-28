@@ -1,13 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez le portfolio de Safiatou Diallo, mettant en avant ses compétences, ses projets et ses réalisations en développement web, design et plus encore.">
+    <meta name="description"
+        content="Découvrez le portfolio de Safiatou Diallo, mettant en avant ses compétences, ses projets et ses réalisations en développement web, design et plus encore.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Portfolio - Safiatou Diallo</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <!-- Barre de navigation -->
+    <!--============================== BARRE DE NAVIGATION ================================-->
     <header>
         <div class="navbar">
             <div class="logo">Safiatou DIALLO</div>
@@ -29,22 +34,20 @@
         </div>
     </header>
 
-   <!-- Section Accueil -->
-<section id="accueil">
-    <video autoplay loop muted playsinline class="background-video">
-        <source src="css/images/acceuil.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture des vidéos HTML5.
-    </video>
-    <div class="content">
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <p>Je suis Safiatou DIALLO, étudiante en deuxième année de BTS SIO option SLAM.</p>
-        <br>
-        <a href="CV-Safiatou-DIALLO.pdf" class="btn" download>Télécharger mon CV</a>
-    </div>
-</section>
+    <!--================================ SECTION ACCEUIL ================================-->
 
-
-    <!-- Section Sleek Scrolling Bar -->
+    <section id="accueil">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="css/images/acceuil.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture des vidéos HTML5.
+        </video>
+        <div class="content">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Je suis Safiatou DIALLO, étudiante en deuxième année de BTS SIO option SLAM.</p>
+            <br>
+            <a href="CV-Safiatou-DIALLO.pdf" class="btn" download>Télécharger mon CV</a>
+        </div>
+    </section>
     <div class="sleek-scrolling-bar">
         <p>🎓 Étudiante en deuxième année BTS SIO option SLAM. Explorer les nouvelles technologies et relever des défis
             font partie de mes motivations principales. Je suis ouverte à diverses opportunités professionnelles :
@@ -52,7 +55,8 @@
             innovants.</p>
     </div>
 
-    <!-- Section À propos -->
+    <!--============================== SECTION A PROPOS ================================-->
+
     <section id="about" class="main-content">
         <div class="left-column">
             <h2 class="small">À propos de moi</h2>
@@ -65,12 +69,32 @@
             <div class="cta">
                 <button>Engagez-moi</button>
                 <div class="social-icons">
-                    <a href="https://github.com" target="_blank" class="icon github">
+
+                    <div id="github-icon" title="Voir GitHub" target="_blank" class="icon github-icon"
+                        title="Voir GitHub">
                         <i class="fab fa-github"></i>
-                    </a>
+                    </div>
+                    <div id="profile-modal" class="modal">
+                        <div class="modal-content">
+                            <span id="close-modal">&times;</span>
+                            <img id="avatar" src="" alt="Avatar">
+                            <h2 id="username"></h2>
+                            <p id="location"></p>
+                            <a id="profile-link" href="" target="_blank">Voir le profil GitHub</a>
+                        </div>
+                    </div>
                     <a href="https://linkedin.com" target="_blank" class="icon linkedin">
                         <i class="fab fa-linkedin"></i>
                     </a>
+                </div>
+                <div id="profile-modal" class="modal">
+                    <div class="modal-content">
+                        <span id="close-modal">&times;</span>
+                        <img id="avatar" src="" alt="Avatar">
+                        <h2 id="username"></h2>
+                        <p id="location"></p>
+                        <a id="profile-link" href="" target="_blank">Voir le profil GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,122 +102,315 @@
             <img src="css/images/Image1.jpg" alt="Image de Profil" class="profile-image">
         </div>
     </section>
+  
+  <script>
+    document.getElementById('github-icon').addEventListener('click', function (event) {
+            event.preventDefault(); // pour empêcher la redirection par défaut du lien
+            const modal = document.getElementById('profile-modal');
+            modal.style.display = 'block'; // pour afficher le modal
+
+            // Appel à l'API GitHub pour récupérer les informations de l'utilisateur
+            fetch('https://api.github.com/users/SafiDial')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors de la récupération des données GitHub');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Remplir les informations dans le modal
+                    document.getElementById('avatar').src = data.avatar_url || '';
+                    document.getElementById('username').textContent = data.login || 'Nom d’utilisateur indisponible';
+                    document.getElementById('location').textContent = data.location || 'Localisation non renseignée';
+                    document.getElementById('profile-link').href = data.html_url || '#';
+                })
+                .catch(error => {
+                    console.error('Erreur :', error);
+                    alert("Impossible de charger les données GitHub. Veuillez réessayer plus tard.");
+                });
+        });
+
+        // Gestion de la fermeture du modal
+        document.getElementById('close-modal').addEventListener(
+
+            'click', function () {
+                document.getElementById('profile-modal').style.display = 'none'; // Cache le modal
+            });
+
+        //  fermer le modal en cliquant à l'extérieur
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById('profile-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!--============================== SECTION PROJET ================================-->
+
+    <section id="projets" class="projects">
+        <div class="conteneur">
+            <h1>Mes Projets</h1>
+            <input type="radio" id="Tous" name="categories" value="Tous" checked>
+            <input type="radio" id="Web" name="categories" value="Web">
+            <input type="radio" id="React" name="categories" value="React">
+            <input type="radio" id="C" name="categories" value="C">
+
+            <ol class="filtres">
+                <li>
+                    <label for="Tous">Tous</label>
+                </li>
+                <li>
+                    <label for="Web">Web</label>
+                </li>
+                <li>
+                    <label for="React">React</label>
+                </li>
+                <li>
+                    <label for="C">C</label>
+                </li>
+            </ol>
+
+            <ol class="projets">
+                <li class="projet" data-category="Web">
+                    <article>
+                        <figure>
+                            <img src="css/images/fastfood.jpg" alt="Site Web de Restauration Rapide">
+                            <figcaption>
+                                <ol class="categories-projet">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                </ol>
+                                <h3 class="titre-projet">Site Web de Restauration Rapide </h3>
+                                <p>
+                                    Site web pour une entreprise de restauration rapide : commandes en ligne, interface
+                                    moderne et responsive.
+                                </p>
+                                <div class="links-container">
+                                    <a href="https://safidial.github.io/Projet-site-web-d-un-fast-food-/"
+                                        class="github-link" target="_blank">Voir le site</a>
+                                    <a href="https://safidial.github.io/Projet-site-web-d-un-fast-food-/"
+                                        class="github-link" target="_blank">Voir le code</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+                <li class="projet" data-category="Web">
+                    <article>
+                        <figure>
+                            <img src="css/images/nettoyage-et-entretien.jpg" alt="Site Web de Nettoyage">
+                            <figcaption>
+                                <ol class="categories-projet">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>PHP</li>
+                                </ol>
+                                <h2 class="titre-projet">Site Web Entrepride de Nettoyage</h2>
+                                <p>
+                                    Site web pour une entreprise fictive de nettoyage : formulaire de demande, services
+                                    présentés, interface intuitive.
+                                </p>
+                                <div class="links-container">
+                                    <a href="https://github.com/SafiDial/Page-web.git" class="github-link"
+                                        target="_blank">Voir le code</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+                <li class="projet" data-category="React">
+                    <article>
+                        <figure>
+                            <img src="css/images/suivi_cadidature.png" alt="Application de Suivi de Candidatures">
+                            <figcaption>
+                                <ol class="categories-projet">
+                                    <li>React</li>
+                                    <li>React-Big-Calendar</li>
+                                </ol>
+                                <h2 class="titre-projet">Application de Suivi de Candidatures</h2>
+                                <p>
+                                    Application de gestion : candidatures, entretiens, rapports. Développée avec React
+                                    pour une interface réactive.
+                                </p>
+                                <div class="links-container">
+                                    <a href="https://github.com/SafiDial/Suivi-de-candidatures-.git" class="github-link"
+                                        target="_blank">Voir le code</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+                <li class="projet" data-category="C">
+                    <article>
+                        <figure>
+                            <img src="css/images/casse_brique.jpg" alt="Jeu de Casse-Brique">
+                            <figcaption>
+                                <ol class="categories-projet">
+                                    <li>C</li>
+                                    <li>SDL2</li>
+                                    <li>Linux Debian</li>
+                                </ol>
+                                <h2 class="titre-projet">Jeu de Casse-Brique Simple</h2>
+                                <p>
+                                    Jeu de casse-brique en C avec SDL2 : design minimaliste, gameplay fluide et
+                                    contrôles simples.
+                                </p>
+                                <div class="links-container">
+                                    <a href="https://github.com/SafiDial/jeu-casse-brique.git" class="github-link"
+                                        target="_blank">Voir le code</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!--============================== SECTION COMPETENCE ================================-->
+
+    <section id="compétences">
+        <h1>Mes Compétences</h1>
+
+        <div class="container">
+            <div class="image-container">
+                <img src="css/images/Compt1.png" alt="Votre Image">
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h2>Développement Web</h2>
+                    <div class="skills-grid">
+                        <div class="skill">HTML</div>
+                        <div class="skill">CSS</div>
+                        <div class="skill">JS</div>
+                        <div class="skill">REACT</div>
+                        <div class="skill">PHP</div>
+                        <div class="skill">NodeJS</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h2>Développement Logiciel</h2>
+                    <div class="skills-grid">
+                        <div class="skill">PYTHON</div>
+                        <div class="skill">Java</div>
+                        <div class="skill">C</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h2>Systèmes et Outils</h2>
+                    <div class="skills-grid">
+                        <div class="skill">LINUX</div>
+                        <div class="skill">Pack Office</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--============================== SECTION FORMATION ================================-->
+
+    <section id="formation">
+        <h1>Mes Diplômes et Formations</h1>
+        <div class="date-container">
+            <div class="timeline">
+                <div class="item">
+                    <div class="point red"></div>
+                    <span class="date red top">(2024 - 2025)</span>
+                    <div class="description top">
+                        BTS SLAM (BTS Services Informatiques aux Organisations Option SLAM | ITIC Paris (France))
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="point green"></div>
+                    <span class="date green bottom">(2023 - 2024)</span>
+                    <div class="description bottom">
+                        1ère année Dév Info (Première année Développement Informatique | CESI École d'ingénieur Brest
+                        (France))
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="point yellow"></div>
+                    <span class="date yellow top">(2022 - 2023)</span>
+                    <div class="description top">
+                        Licence 1 Info (Licence 1 Informatique | Institut Universitaire d'Abidjan (IUA) Abidjan, Côte
+                        d'Ivoire)
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="point white"></div>
+                    <span class="date white bottom">(2020 - 2021)</span>
+                    <div class="description bottom">
+                        BAC Série D (Baccalauréat Série D | Victor Schoelcher Adjamé, Côte d'Ivoire)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="description"></div>
+    </section>
 
 
-
-
-
+    <svg id="progress-circle" width="100" height="100" viewBox="0 0 100 100" style="cursor: pointer;">
+        <!-- Définitions de dégradé -->
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFD700" />
+                <stop offset="100%" stop-color="#4B0082" />
+            </linearGradient>
+        </defs>
+        
+        <!-- Cercle de fond -->
+        <circle cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none" />
+        
+        <!-- Cercle de progression -->
+        <circle id="progress" cx="50" cy="50" r="45" 
+            stroke="url(#gradient)" 
+            stroke-width="10" 
+            fill="none" 
+            stroke-dasharray="283" 
+            stroke-dashoffset="283" />
+        
+        <!-- Icône au centre -->
+        <image href="favicon/fleche-vers-le-bas.png" 
+               x="35" y="35" width="30" height="30" />
+    </svg>
+    
+    <script>
+        document.getElementById('progress-circle').addEventListener('click', function() {
+            // Défilement vers le bas avec un comportement fluide
+            window.scrollBy({
+                top: window.innerHeight, // Descend d'une hauteur d'écran
+                behavior: 'smooth' // Effet de défilement fluide
+            });
+        });
+    
+        // Progression du cercle au défilement
+        window.addEventListener('scroll', function() {
+            var progressCircle = document.getElementById('progress');
+            var scrollPosition = window.pageYOffset; // Position de défilement actuelle
+            var maxScroll = document.body.scrollHeight - window.innerHeight; // Défilement maximal
+            var scrollPercentage = (scrollPosition / maxScroll) * 100; // Pourcentage de défilement
+    
+            // Calculer la longueur du contour à afficher
+            var circumference = 283; 
+            var offset = circumference - (scrollPercentage / 100) * circumference;
+                progressCircle.style.strokeDashoffset = offset;
+        });
+    </script>
+    
 
 
     
-
-    <!-- Section Projets -->
-    <section id="projets" class="projects">
-        <h2>Mes Projets</h2>
-        <div class="projects-container">
-            <!-- Projet 1: Site Web de Restauration Rapide -->
-            <div class="project-card">
-                <img src="css/images/fastfood.jpg" alt="Site Web de Restauration Rapide" class="project-image">
-                <h3>Site Web de Restauration Rapide le bon Gout</h3>
-                <p class="project-description">Ce projet est un site web pour une entreprise de restauration rapide, permettant aux clients de commander en ligne. L'interface est simple, claire et adaptée aux besoins des utilisateurs, avec un design moderne et responsive.</p>
-                <p><strong>Technologies utilisées :</strong> HTML, CSS, boostrap et JavaScript</p>
-                <div class="links-container">
-                    <a href="https://safidial.github.io/Projet-site-web-d-un-fast-food-/" class="github-link" target="_blank">Voir le site</a>
-                    <a href="https://safidial.github.io/Projet-site-web-d-un-fast-food-/" class="github-link" target="_blank">Voir le code</a>
-                </div>
-            </div>
-            
-            <!-- Projet 2: Site Web de Nettoyage -->
-            <div class="project-card">
-                <img src="css/images/nettoyage-et-entretien.jpg" alt="Site Web de Nettoyage" class="project-image">
-                <h3>Site Web de Nettoyage</h3>
-                <p class="project-description">Ce projet est un site web pour une entreprise fictive de nettoyage. Il
-                    comprend un formulaire de demande de service, des informations sur les services proposés, et une
-                    interface utilisateur intuitive.</p>
-                <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-                <div class="links-container">
-                    <a href="https://github.com/SafiDial/Page-web.git" class="github-link" target="_blank">Voir le code</a>
-                </div>             
-            </div>
-
-            <!-- Projet 1: Application de Suivi de Candidatures -->
-            <div class="project-card hidden">
-                <img src="css/images/suivi_cadidature.png" alt="Application de Suivi de Candidatures" class="project-image">
-                <h3>Application de Suivi de Candidatures</h3>
-                <p class="project-description">Cette application permet de gérer les candidatures, planifier les
-                    entretiens, et consulter les rapports. Elle est construite avec React pour offrir une expérience
-                    utilisateur réactive et moderne.</p>
-                <p><strong>Technologies utilisées :</strong> React, Styled-Components, React-Big-Calendar, React Icons</p>
-                <div class="links-container">
-                    <a href="https://github.com/SafiDial/Suivi-de-candidatures-.git" class="github-link" target="_blank">Voir le code</a>
-                </div> 
-            </div>
-
-           
-            <!-- Projet 4: Jeu de Casse-Brique -->
-            <div class="project-card">
-                <img src="css/images/casse_brique.png" alt="Jeu de Casse-Brique" class="project-image">
-                <h3>Jeu de Casse-Brique</h3>
-                <p class="project-description">Ce projet est un jeu de casse-brique développé en C utilisant la
-                    bibliothèque SDL2. Il présente un design minimaliste avec une expérience de jeu fluide et des
-                    contrôles simples.</p>
-                <p><strong>Technologies utilisées :</strong> Langage C, SDL2, Linux Debian</p>
-                <div class="links-container">
-                    <a href="https://github.com/SafiDial/jeu-casse-brique.git" class="github-link" target="_blank">Voir le code</a>
-                </div>           
-             </div>
-
-         </div>
-        </div>
-
-        <button id="show-more-btn" class="button">Voir plus</button>
-    </section>
-
-
-
-
-
-
-    <!-- Section Formation -->
-    <section id="formation">
-        <h1>Mes Diplômes et Formations</h1>
-
-      <div class="date-container">
-        <div class="date-box" data-description="BTS Services Informatiques aux Organisations Option SLAM (2024 - 2025) | ITIC Paris (France)" data-image="css/images/prem.webp">
-          <div class="date"><i class="fas fa-laptop-code"></i> BTS SLAM</div>
-          <div class="dot"></div>
-        </div>
-        <div class="date-box" data-description="Première année Développement Informatique (2023 - 2024) | CESI École d'ingénieur Brest (France)" data-image="css/images/deux.jpg">
-          <div class="date"><i class="fas fa-cogs"></i> 1ère année Dév Info</div>
-          <div class="dot"></div>
-        </div>
-        <div class="date-box" data-description="Licence 1 Informatique (2022 - 2023) | Institut Universitaire d'Abidjan (IUA) Abidjan, Côte d'Ivoire" data-image="css/images/pre.jpg">
-          <div class="date"><i class="fas fa-university"></i> Licence 1 Info</div>
-          <div class="dot"></div>
-        </div>
-        <div class="date-box" data-description="Baccalauréat Série D (2020 - 2021) | Victor Schoelcher Adjamé, Côte d'Ivoire" data-image="css/images/bac.webp">
-          <div class="date"><i class="fas fa-graduation-cap"></i> BAC Série D</div>
-          <div class="dot"></div>
-        </div>
-      </div><div id="description"></div>
-    </section>
-
-
-
-
-
-
-
 
     <!-- Section Expériences -->
     <section id="experiences">
         <!-- Contenu des expériences -->
     </section>
 
-    <!-- Section Formation -->
-    <section id="formation">
-        <!-- Contenu de la formation -->
-    </section>
+
 
     <!-- Section Contact -->
     <section id="contact">
@@ -204,3 +421,7 @@
 </body>
 
 </html>
+
+
+
+
