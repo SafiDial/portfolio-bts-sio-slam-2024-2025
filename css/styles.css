@@ -598,6 +598,7 @@ nav .menu a {
   color: black;
 }
 
+
 #projets body {
   margin: 50px 0;
   color: black;
@@ -609,8 +610,9 @@ nav .menu a {
 }
 
 #projets .conteneur {
-  max-width: 1200px;
+  max-width: 1310px;
   margin: 0 auto;
+  padding: 30px;
 }
 
 #projets h1 {
@@ -687,8 +689,8 @@ nav .menu a {
 
 
 .categories-projet li {
-  color: #000;
-  border: 2px solid black;
+  color: #000000;
+  border: 2px solid rgba(97, 79, 13, 0.329);
   padding: 8px 8px; 
   border-radius: 5px; 
   font-size: 10px;
@@ -724,7 +726,7 @@ nav .menu a {
   justify-content: center;
   max-width: 200px;
   text-align: center;
-  background: linear-gradient(135deg, #FFD700, #6c8200);
+  background: linear-gradient(135deg, #FFD700, #620082de);
 
 }
 
@@ -747,7 +749,7 @@ nav .menu a {
 
 .projets .projet .titre-projet {
   font-size: 24px;
-  color: #FFD700;
+  color: #000000;
   margin-bottom: 16px;
   text-transform: uppercase;
   text-align: center;
@@ -787,7 +789,6 @@ color: #ffffff;
   color: #e31b23;
 }
 
-/* REQUÊTES MÉDIA */
 @media screen and (max-width: 900px) {
   #projets .projets {
     grid-template-columns: repeat(3, 1fr);
@@ -828,6 +829,28 @@ color: #ffffff;
   align-items: center;
   padding: 0 24px;
 }
+
+
+
+/******************* STYLE2 POUR LES PROJETS ****************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /******************* STYLE2 POUR LES COMPTEMCES ****************************/
 
