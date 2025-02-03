@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Découvrez le portfolio de Safiatou Diallo, mettant en avant ses compétences, ses projets et ses réalisations en développement web, design et plus encore.">
+    <meta name="description" content="Découvrez le portfolio de Safiatou Diallo, mettant en avant ses compétences, ses projets et ses réalisations en développement web, design et plus encore.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Portfolio - Safiatou Diallo</title>
     <link rel="stylesheet" href="css/styles.css">
@@ -69,9 +68,7 @@
             <div class="cta">
                 <button>Engagez-moi</button>
                 <div class="social-icons">
-
-                    <div id="github-icon" title="Voir GitHub" target="_blank" class="icon github-icon"
-                        title="Voir GitHub">
+                    <div id="github-icon" title="Voir GitHub" class="icon github-icon">
                         <i class="fab fa-github"></i>
                     </div>
                     <div id="profile-modal" class="modal">
@@ -87,15 +84,6 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
-                <div id="profile-modal" class="modal">
-                    <div class="modal-content">
-                        <span id="close-modal">&times;</span>
-                        <img id="avatar" src="" alt="Avatar">
-                        <h2 id="username"></h2>
-                        <p id="location"></p>
-                        <a id="profile-link" href="" target="_blank">Voir le profil GitHub</a>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="right-column">
@@ -103,8 +91,8 @@
         </div>
     </section>
   
-  <script>
-    document.getElementById('github-icon').addEventListener('click', function (event) {
+    <script>
+        document.getElementById('github-icon').addEventListener('click', function (event) {
             event.preventDefault(); // pour empêcher la redirection par défaut du lien
             const modal = document.getElementById('profile-modal');
             modal.style.display = 'block'; // pour afficher le modal
@@ -131,11 +119,9 @@
         });
 
         // Gestion de la fermeture du modal
-        document.getElementById('close-modal').addEventListener(
-
-            'click', function () {
-                document.getElementById('profile-modal').style.display = 'none'; // Cache le modal
-            });
+        document.getElementById('close-modal').addEventListener('click', function () {
+            document.getElementById('profile-modal').style.display = 'none'; // Cache le modal
+        });
 
         //  fermer le modal en cliquant à l'extérieur
         window.addEventListener('click', function (event) {
@@ -247,7 +233,7 @@
                 <li class="projet" data-category="C">
                     <article>
                         <figure>
-                            <img src="css/images/casse_brique.jpg" alt="Jeu de Casse-Brique">
+                            <img src="css/images/casse_brique.png" alt="Jeu de Casse-Brique">
                             <figcaption>
                                 <ol class="categories-projet">
                                     <li>C</li>
@@ -272,10 +258,6 @@
                 <a href="Projets/Projet_JAVA.html" class="button-30" role="button">Voir Projets Pros JAVA</a>
                 <a href="ProjetsPerso.html" class="button-30" role="button">Voir Projets Pers PHP</a>
             </div>
-            
-            <style>
-           
-            </style>
         </div>
     </section>
 
@@ -359,7 +341,6 @@
         </div>
         <div id="description"></div>
     </section>
-
 
     <svg id="progress-circle" width="100" height="100" viewBox="0 0 100 100" style="cursor: pointer;">
         <!-- Définitions de dégradé -->
