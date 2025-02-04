@@ -22,7 +22,7 @@
                     <li><a href="#projets" id="menu-projets">Projets</a></li>
                     <li><a href="#formation" id="menu-formation">Formation</a></li>
                     <li><a href="#experiences" id="menu-experiences">Expériences</a></li>
-                    <li><a href="#contact" id="menu-contact">Contact</a></li>
+                    <li><a href="#engagements" id="menu-contact">Engagements</a></li>
                 </ul>
             </nav>
             <div class="burger">
@@ -66,7 +66,7 @@
                 projets collaboratifs, ou une alternance, pour enrichir mes compétences et contribuer à des projets
                 innovants.</p>
             <div class="cta">
-                <button>Engagez-moi</button>
+                <button>07-67-11-60-24</button>
                 <div class="social-icons">
                     <div id="github-icon" title="Voir GitHub" class="icon github-icon">
                         <i class="fab fa-github"></i>
@@ -342,76 +342,148 @@
         <div id="description"></div>
     </section>
 
-    <svg id="progress-circle" width="100" height="100" viewBox="0 0 100 100" style="cursor: pointer;">
-        <!-- Définitions de dégradé -->
-        <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#FFD700" />
-                <stop offset="100%" stop-color="#4B0082" />
-            </linearGradient>
-        </defs>
-        
-        <!-- Cercle de fond -->
-        <circle cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none" />
-        
-        <!-- Cercle de progression -->
-        <circle id="progress" cx="50" cy="50" r="45" 
-            stroke="url(#gradient)" 
-            stroke-width="10" 
-            fill="none" 
-            stroke-dasharray="283" 
-            stroke-dashoffset="283" />
-        
-        <!-- Icône au centre -->
-        <image href="favicon/fleche-vers-le-bas.png" 
-               x="35" y="35" width="30" height="30" />
-    </svg>
-    
-    <script>
-        document.getElementById('progress-circle').addEventListener('click', function() {
-            // Défilement vers le bas avec un comportement fluide
-            window.scrollBy({
-                top: window.innerHeight, // Descend d'une hauteur d'écran
-                behavior: 'smooth' // Effet de défilement fluide
-            });
-        });
-    
-        // Progression du cercle au défilement
-        window.addEventListener('scroll', function() {
-            var progressCircle = document.getElementById('progress');
-            var scrollPosition = window.pageYOffset; // Position de défilement actuelle
-            var maxScroll = document.body.scrollHeight - window.innerHeight; // Défilement maximal
-            var scrollPercentage = (scrollPosition / maxScroll) * 100; // Pourcentage de défilement
-    
-            // Calculer la longueur du contour à afficher
-            var circumference = 283; 
-            var offset = circumference - (scrollPercentage / 100) * circumference;
-                progressCircle.style.strokeDashoffset = offset;
-        });
-    </script>
-    
-
-
-    
+ 
 
     <!-- Section Expériences -->
-    <section id="experiences">
+    <section id="experiences" class="experience-section">
         <h2>Expériences</h2>
-        <!-- Contenu des expériences -->
+        
+        <div class="experience-container">
+            <div class="experience">
+                <h3>Stage chez VNB-IT</h3>
+                <p><span class="highlight">Période :</span> 10 juin - 10 août 2024</p>
+                <p><span class="highlight">Tâches effectuées :</span></p>
+                <ul>
+                    <li>Réalisation de maquettes sur <span class="tool">Figma</span></li>
+                    <li>Développement d'un site vitrine sur <span class="tool">WordPress</span></li>
+                    <li>Travail sur un site RISE avec <span class="tool">Node.js</span> et autres technologies</li>
+                </ul>
+                <p><span class="highlight">Outils utilisés :</span> <span class="tool">Figma, WordPress, Node.js</span></p>
+            </div>
+            
+            <div class="experience">
+                <h3>Stage chez ITIC Paris</h3>
+                <p><span class="highlight">Période :</span> 04 novembre - 17 décembre 2024</p>
+                <p><span class="highlight">Tâches effectuées :</span></p>
+                <ul>
+                    <li>Création d'une maquette</li>
+                    <li>Développement d'un site web de fast-food en <span class="tool">HTML, CSS et JavaScript</span></li>
+                    <li>Déploiement du site sur <span class="tool">GitHub</span></li>
+                </ul>
+                <p><span class="highlight">Outils utilisés :</span> <span class="tool">HTML, CSS, JavaScript, GitHub</span></p>
+            </div>
+        </div>
     </section>
+    
 
 
-
-    <!-- Section Contact -->
-    <section id="contact">
-        <!-- Contenu de la section Contact -->
+    <section id="engagements">
+        <h1>Mes Engagements</h1>
+        <div class="container">
+            <div class="engagements-container">
+                <div class="engagements-row">
+                    <div class="engagement-category">
+                        <h2><img src="favicon/solidarite.png" alt="heart"> Missions Humanitaires</h2>
+                        <div class="engagements-column">
+                            <div class="engagement yellow">
+                                <img src="favicon/journee-mondiale-de-lhumanitaire.png" alt="team"> Membre de l'association humanitaire ITIC Paris
+                            </div>
+                            <div class="engagement yellow">
+                                <img src="favicon/orphelin.png" alt="child"> Bénévole pour les orphelins en Côte d'Ivoire
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engagement-category">
+                        <h2><img src="favicon/connexion.png" alt="briefcase"> Autres Engagements</h2>
+                        <div class="engagements-column">
+                            <div class="engagement purple">
+                                <img src="favicon/robot.png" alt="robot"> Membre de l'Association de Robotique à CESI Brest
+                            </div>
+                            <div class="engagement purple">
+                                <img src="favicon/eleves.png" alt="organization"> Secrétaire National de l'AEEGCI en Côte d'Ivoire
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container engagement-image">
+                <img src="css/images/imageHumanitaire.png" alt="Mon Engagement">
+            </div>
+        </div>
     </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="js/script.js"></script>
 </body>
 
 </html>
 
+
+
+
+<svg id="progress-circle" width="100" height="100" viewBox="0 0 100 100" style="cursor: pointer;">
+    <!-- Définitions de dégradé -->
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFD700" />
+            <stop offset="100%" stop-color="#4B0082" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Cercle de fond -->
+    <circle cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none" />
+    
+    <!-- Cercle de progression -->
+    <circle id="progress" cx="50" cy="50" r="45" 
+        stroke="url(#gradient)" 
+        stroke-width="10" 
+        fill="none" 
+        stroke-dasharray="283" 
+        stroke-dashoffset="283" />
+    
+    <!-- Icône au centre -->
+    <image href="favicon/fleche-vers-le-bas.png" 
+           x="35" y="35" width="30" height="30" />
+</svg>
+
+<script>
+    document.getElementById('progress-circle').addEventListener('click', function() {
+        // Défilement vers le bas avec un comportement fluide
+        window.scrollBy({
+            top: window.innerHeight, // Descend d'une hauteur d'écran
+            behavior: 'smooth' // Effet de défilement fluide
+        });
+    });
+
+    // Progression du cercle au défilement
+    window.addEventListener('scroll', function() {
+        var progressCircle = document.getElementById('progress');
+        var scrollPosition = window.pageYOffset; // Position de défilement actuelle
+        var maxScroll = document.body.scrollHeight - window.innerHeight; // Défilement maximal
+        var scrollPercentage = (scrollPosition / maxScroll) * 100; // Pourcentage de défilement
+
+        // Calculer la longueur du contour à afficher
+        var circumference = 283; 
+        var offset = circumference - (scrollPercentage / 100) * circumference;
+            progressCircle.style.strokeDashoffset = offset;
+    });
+</script>
 
 
 

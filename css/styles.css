@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -82,7 +81,6 @@ font-size: 30px;
   box-shadow: 0 0 15px #ffd500, 0 0 20px #ffd447;
 }
 
-/* Effet de transformation dynamique lors du survol */
 .nav-links a:before,
 .nav-links a:after {
   position: absolute;
@@ -166,9 +164,8 @@ font-size: 30px;
   .burger {
     display: none;
   }
+  
 }
-
-
 
 #accueil {
   position: relative;
@@ -196,7 +193,6 @@ font-size: 30px;
   position: relative;
   z-index: 1;
 }
-
 
 #accueil h1 {
   font-size: 48px;
@@ -284,6 +280,9 @@ font-size: 30px;
     font-size: 14px;
     margin-top: 20px;
   }
+  .logo{
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -310,10 +309,17 @@ font-size: 30px;
     display: flex;
   }
 }
+@media (max-width: 768px) {
+  #accueil h1 {
+    margin-top: 80px;
+  }
+  #accueil p {
+      font-size: 1px; 
+  }
+}
 
+/* ====================== Barre violette défilante ============================= */
 
-
-/* ******************************** Barre violette défilante ******************************************** */
 .sleek-scrolling-bar {
   background: #000000;
   color: #ffffff;
@@ -348,8 +354,7 @@ font-size: 30px;
   }
 }
 
-
-/********************* STYLE2 POUR L IMAGE ET LE TEXTE A PROPOS DE MOI  ********************/
+/*============================= STYLE2 POUR L IMAGE ET LE TEXTE A PROPOS DE MOI  ======================*/
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -479,12 +484,9 @@ font-size: 30px;
   border-radius: 50%;
 }
 
-/*  survol, l'effet de remplissage */
 .social-icons .icon:hover::before {
   transform: scale(1);
 }
-
-/* Lorsque l'icône est survolée */
 
 .social-icons .icon i {
   font-size: 22px;
@@ -495,7 +497,6 @@ font-size: 30px;
   transform: scale(1.1);
 }
 
-/* Modal GitHub */
 .modal {
   display: none;
   position: fixed;
@@ -570,6 +571,7 @@ nav .menu a {
   .right-column {
     margin-top: 20px;
   }
+ 
 
   .profile-image {
     max-width: 100%;
@@ -578,12 +580,11 @@ nav .menu a {
   .social-icons {
     justify-content: center;
   }
+
 }
 
 
-
-
-/******************* STYLE2 POUR LES PROJETS ****************************/
+/*============================= STYLE2 POUR LES PROJETS ===============================**/
 
 #projets img {
   display: block;
@@ -886,6 +887,14 @@ color: #ffffff;
   }
 }
 
+@media (max-width: 768px) {
+  #projets h1 {
+    font-size: 24px;  
+    width: 80%; 
+    margin: 20px auto;
+  }
+}
+
 .button-30:focus {
   box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
@@ -900,24 +909,7 @@ color: #ffffff;
   transform: translateY(2px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/******************* STYLE2 POUR LES COMPTEMCES ****************************/
+/*============================= STYLE2 POUR LES COMPTEMCES ================================*/
 
 #compétences h1 {
   color: #FFD700;
@@ -932,11 +924,13 @@ color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 
+/* Section compétences */
 #compétences {
   margin-top: 50px;
   padding: 20px;
 }
 
+/* Conteneur global pour les compétences */
 .container {
   display: flex;
   gap: 20px;
@@ -947,6 +941,7 @@ color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Conteneur de l'image */
 .image-container {
   flex: 1;
   max-width: 50%;
@@ -961,6 +956,7 @@ color: #ffffff;
   display: block;
 }
 
+/* Conteneur des compétences */
 .skills-container {
   flex: 1;
   max-width: 50%;
@@ -969,6 +965,7 @@ color: #ffffff;
   gap: 20px;
 }
 
+/* Catégories de compétences */
 .skill-category h2 {
   margin-bottom: 10px;
   font-size: 15px;
@@ -988,12 +985,14 @@ color: #ffffff;
   border-radius: 2px;
 }
 
+/* Grille de compétences */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
+/* Compétence individuelle */
 .skill {
   background: linear-gradient(135deg, #FFD700, #4B0082);
   padding: 7px;
@@ -1009,11 +1008,16 @@ color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+  #compétences h1 {
+    font-size: 24px;  
+    width: 80%;  
+    margin: 20px auto;
+  }
+
   .container {
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
   }
 
   .image-container,
@@ -1022,23 +1026,27 @@ color: #ffffff;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
-
 @media (max-width: 480px) {
   .skills-grid {
     grid-template-columns: 1fr;
   }
 
   .skill-category h2 {
-    font-size: 1.3em;
+    font-size: 20px; 
   }
-  #compétences > h1  {
+  #compétences > h1 {
+    font-size: 20px; 
     margin: 20px auto 30px;
-    font-size: 24px;
+    width: 90%; 
+  }
+  .skill {
+    font-size: 12px; 
   }
 }
+
 
 /*============================= Section de formation =================================*/
 #formation>h1 {
@@ -1123,7 +1131,6 @@ section#formation {
 .description.bottom {
   top: 50px;
 }
-
 
 /* Alignement des points et descriptions */
 .item {
@@ -1222,7 +1229,6 @@ section#formation {
   }
 }
 
-
 #progress-circle {
   position: fixed;
   bottom: 20px;
@@ -1230,3 +1236,378 @@ section#formation {
   z-index: 1000;
   height:60px;
 }
+
+@media (max-width: 480px) {
+  #formation > h1 {
+    width: 90%;
+    font-size: 20px; 
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .timeline {
+    padding: 0 5px; 
+  }
+  .description {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 12px; 
+  }
+
+  .point {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/***************************** Style l'experience ***********************/
+.experience-section {
+  padding: 40px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#experiences > h2 {
+  margin: 30px auto 200px;
+  width: 50%;
+  text-align: center;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 5px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  color: #FFD700;
+}
+
+#experiences > h2 {
+  font-size: 32px;
+  margin-top: 60px;
+  margin-bottom: 90px;
+}
+
+.experience-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.experience {
+  background: linear-gradient(135deg, rgba(34, 34, 34, 0.9), rgba(51, 51, 51, 0.9));
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience:hover {
+  transform: scale(1.05);
+}
+
+h3 {
+  color: #FFD700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.highlight {
+  color: #FFAA33;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tool {
+  color: #8A2BE2;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* ===================== Media Queries ===================== */
+
+@media (max-width: 768px) {
+  .experience-section {
+      padding: 20px;
+  }
+
+  #experiences > h2 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 60px;
+  }
+
+  .experience-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+  }
+
+  .experience {
+      width: 90%;  
+  }
+  #experiences > h2 {
+    width: 80%;  
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding: 10px;
+}
+
+  h3 {
+      font-size: 20px;
+  }
+
+  ul {
+      font-size: 14px; 
+  }
+
+  li {
+      font-size: 14px; 
+  }
+
+  p {
+      font-size: 16px; 
+  }
+
+  .highlight {
+      font-size: 18px; 
+  }
+
+  .tool {
+      font-size: 16px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section {
+      padding: 15px;
+  }
+
+  #experiences > h2 {
+      font-size: 20px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+  }
+
+  .experience-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+  }
+  #experiences > h2 {
+    width: 90%;  
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 8px;
+}
+
+  .experience {
+      width: 95%;  
+  }
+
+  h3 {
+      font-size: 18px;
+  }
+
+  ul {
+      font-size: 12px; 
+  }
+
+  li {
+      font-size: 12px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  .highlight {
+      font-size: 16px;
+  }
+
+  .tool {
+      font-size: 14px;
+  }
+}
+
+/* ======================= SECTION ENGAGEMENTS ===================== */
+
+
+#engagements {
+  color: #ecf0f1;
+  padding: 80px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+#engagements h1 {
+  color: #FFD700;
+  margin: 30px auto;
+  width: 50%;
+  text-align: center;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 5px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+#engagements .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0px 20px;
+}
+
+.engagements-container {
+  width: 660px;
+  text-align: left;
+}
+
+.engagements-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.engagement-category {
+  width: 310px;
+}
+
+.engagement-category h2 {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.engagement-category img {
+  width: 22px;
+  height: 22px;
+}
+
+.engagements-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.engagement {
+  background-color: #f1c40f;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 90px;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.engagement.purple {
+  background-color: #8e44ad;
+  color: #fff;
+}
+
+.engagement img {
+  width: 30px;
+  height: 30px;
+}
+
+.image-container.engagement-image {
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto; 
+}
+
+.image-container.engagement-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  #engagements .container {
+      flex-direction: column-reverse;
+      text-align: center;
+  }
+
+  .engagements-container {
+      width: 100%;
+  }
+
+  .engagements-row {
+      flex-direction: column;
+  }
+
+  .engagement-category {
+      width: 100%;
+  }
+
+  .image-container.engagement-image {
+      width: 80%;
+      margin-bottom: 30px;
+  }
+
+  .engagement {
+      min-height: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
