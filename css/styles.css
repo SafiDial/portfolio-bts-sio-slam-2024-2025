@@ -186,6 +186,7 @@ nav .menu a {
   }
   
 }
+/* ========================== STYLE ACCEUIL ============================= */
 
 #accueil {
   position: relative;
@@ -338,7 +339,7 @@ nav .menu a {
   }
 }
 
-/* ====================== Barre violette défilante ============================= */
+/* ========================== BARRE VIOLETTE DEFILENTE ============================= */
 
 .sleek-scrolling-bar {
   background: #000000;
@@ -515,7 +516,6 @@ nav .menu a {
   transform: scale(1.1);
 }
 
-/* Media Queries pour la responsivité */
 @media (max-width: 768px) {
   .cta {
     flex-direction: column;
@@ -560,6 +560,7 @@ nav .menu a {
 }
 
 
+/* ====================== MODAL ============================= */
 
 .modal {
   display: none;
@@ -597,9 +598,6 @@ nav .menu a {
     float: right;
     font-size: 24px;
 }
-
-
-
 
 @media (max-width: 768px) {
   .main-content {
@@ -969,13 +967,11 @@ color: #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 
-/* Section compétences */
 #compétences {
   margin-top: 50px;
   padding: 20px;
 }
 
-/* Conteneur global pour les compétences */
 .container {
   display: flex;
   gap: 20px;
@@ -986,7 +982,6 @@ color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Conteneur de l'image */
 .image-container {
   flex: 1;
   max-width: 50%;
@@ -1001,7 +996,6 @@ color: #ffffff;
   display: block;
 }
 
-/* Conteneur des compétences */
 .skills-container {
   flex: 1;
   max-width: 50%;
@@ -1010,7 +1004,6 @@ color: #ffffff;
   gap: 20px;
 }
 
-/* Catégories de compétences */
 .skill-category h2 {
   margin-bottom: 10px;
   font-size: 15px;
@@ -1030,14 +1023,12 @@ color: #ffffff;
   border-radius: 2px;
 }
 
-/* Grille de compétences */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
-/* Compétence individuelle */
 .skill {
   background: linear-gradient(135deg, #FFD700, #4B0082);
   padding: 7px;
@@ -1093,7 +1084,8 @@ color: #ffffff;
 }
 
 
-/*============================= Section de formation =================================*/
+/*============================= STYLE SECTION FORMATION =================================*/
+
 #formation>h1 {
   color: #FFD700;
   margin: 30px auto 200px;
@@ -1160,7 +1152,6 @@ section#formation {
   background: linear-gradient(135deg, #FFD700, #4B0082);
 }
 
-/* Conteneur des descriptions */
 .description {
   position: absolute;
   width: 200px;
@@ -1185,7 +1176,6 @@ section#formation {
   position: relative;
 }
 
-/* Style pour les dates */
 .date {
   font-weight: bold;
   margin-left: 10px;
@@ -1305,7 +1295,8 @@ section#formation {
   }
 }
 
-/***************************** Style l'experience ***********************/
+/*============================= STYLE SECTION EXPERIENCES =======================*/
+
 .experience-section {
   padding: 40px;
   text-align: center;
@@ -1334,7 +1325,7 @@ section#formation {
 .experience-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 100px;
   flex-wrap: wrap;
 }
 
@@ -1384,9 +1375,6 @@ p {
   font-weight: bold;
   font-size: 18px;
 }
-
-
-/* ===================== Media Queries ===================== */
 
 @media (max-width: 768px) {
   .experience-section {
@@ -1498,7 +1486,7 @@ p {
 
 
 #engagements {
-  color: #ecf0f1;
+  color: #000000;
   padding: 80px 0;
   text-align: center;
   font-family: 'Arial', sans-serif;
@@ -1543,7 +1531,7 @@ p {
 
 .engagement-category h2 {
   font-size: 25px;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 15px;
   display: flex;
   align-items: center;
@@ -1579,7 +1567,7 @@ p {
 
 .engagement.purple {
   background-color: #8e44ad;
-  color: #fff;
+  color: #000000;
 }
 
 .engagement img {
@@ -1642,9 +1630,144 @@ p {
 }
 
 
+/*=========================== STYLE FOOTER GLOBAL ===========================*/
 
 
+.custom-footer {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  padding: 30px 15px;
+  font-family: 'Poppins', sans-serif;
+}
 
+.custom-footer .footer-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  gap: 10px;
+}
+
+.custom-footer .contact-item {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  justify-content: center;
+}
+
+.custom-footer .contact-item i {
+  font-size: 18px;
+  color: #ffcc00;
+}
+
+.custom-footer .footer-divider {
+  width: 90%;
+  border-top: 1px;
+  margin: 15px auto; 
+  border-color: #48484b;
+}
+
+.custom-footer .footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  gap: 15px;
+}
+
+.custom-footer .footer-links, 
+.custom-footer .footer-social {
+  width: 45%;
+  min-width: 220px;
+}
+
+.custom-footer .footer-links h4, 
+.custom-footer .footer-social h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #ffcc00;
+}
+
+.custom-footer .footer-links ul, 
+.custom-footer .footer-social ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.custom-footer .footer-links ul li a, 
+.custom-footer .footer-social ul li a {
+  font-size: 14px;
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.custom-footer .footer-links ul li a:hover, 
+.custom-footer .footer-social ul li a:hover {
+  color: #9b59b6;
+}
+
+.custom-footer .footer-social ul li a {
+  font-size: 20px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.custom-footer .footer-social ul li a:hover {
+  color: #ffcc00;
+}
+
+.custom-footer .footer-final {
+  margin-top: 20px;
+  background-color: #333333;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 12px;
+  color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+  .custom-footer .footer-contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .custom-footer .footer-middle {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .custom-footer .footer-links, 
+  .custom-footer .footer-social {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-footer .footer-links ul,
+  .custom-footer .footer-social ul {
+    gap: 10px;
+  }
+
+  .custom-footer .contact-item {
+    font-size: 12px;
+  }
+
+  .custom-footer .contact-item i {
+    font-size: 16px;
+  }
+}
 
 
 

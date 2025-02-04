@@ -1,3 +1,5 @@
+//======================== scrolled à l'en-tête lors du défilement ========================\\
+
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector("header");
 
@@ -10,17 +12,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+//======================== Gestion du menu burger =======================\\
+
 // Sélectionner les éléments du menu burger et du menu de navigation
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links li');
 
-// Ajouter l'événement pour le menu burger
+// l'événement pour le menu burger
 burger.addEventListener('click', () => {
-    // Ajouter ou enlever la classe active pour ouvrir/fermer le menu
+    // pour ouvrir/fermer le menu
     navLinks.classList.toggle('active');
 
-    // Ajouter ou enlever la classe 'active' pour le burger (transforme en X)
+    // Ajoute ou enlever la classe 'active' pour le burger (transforme en X)
     burger.classList.toggle('active');
 
     // Ajouter une animation de "slide" pour les éléments du menu
@@ -34,6 +39,8 @@ burger.addEventListener('click', () => {
         });
     }
 });
+
+//========================= Affichage des informations GitHub dans un modal ======================\\
 
 document.getElementById('github-icon').addEventListener('click', function (event) {
     event.preventDefault(); // pour empêcher la redirection par défaut du lien
@@ -66,13 +73,8 @@ document.getElementById('close-modal').addEventListener('click', function () {
     document.getElementById('profile-modal').style.display = 'none'; // Cache le modal
 });
 
-//  fermer le modal en cliquant à l'extérieur
-window.addEventListener('click', function (event) {
-    const modal = document.getElementById('profile-modal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
+
+//======================= Progression du cercle au défilement==========================\\
 
 document.getElementById('progress-circle').addEventListener('click', function() {
     // Défilement vers le bas avec un comportement fluide
@@ -89,8 +91,37 @@ window.addEventListener('scroll', function() {
     var maxScroll = document.body.scrollHeight - window.innerHeight; // Défilement maximal
     var scrollPercentage = (scrollPosition / maxScroll) * 100; // Pourcentage de défilement
 
-    // Calculer la longueur du contour à afficher
+    // la longueur du contour à afficher
     var circumference = 283;
     var offset = circumference - (scrollPercentage / 100) * circumference;
     progressCircle.style.strokeDashoffset = offset;
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
