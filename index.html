@@ -91,46 +91,6 @@
         </div>
     </section>
   
-    <script>
-        document.getElementById('github-icon').addEventListener('click', function (event) {
-            event.preventDefault(); // pour empêcher la redirection par défaut du lien
-            const modal = document.getElementById('profile-modal');
-            modal.style.display = 'block'; // pour afficher le modal
-
-            // Appel à l'API GitHub pour récupérer les informations de l'utilisateur
-            fetch('https://api.github.com/users/SafiDial')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Erreur lors de la récupération des données GitHub');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Remplir les informations dans le modal
-                    document.getElementById('avatar').src = data.avatar_url || '';
-                    document.getElementById('username').textContent = data.login || 'Nom d’utilisateur indisponible';
-                    document.getElementById('location').textContent = data.location || 'Localisation non renseignée';
-                    document.getElementById('profile-link').href = data.html_url || '#';
-                })
-                .catch(error => {
-                    console.error('Erreur :', error);
-                    alert("Impossible de charger les données GitHub. Veuillez réessayer plus tard.");
-                });
-        });
-
-        // Gestion de la fermeture du modal
-        document.getElementById('close-modal').addEventListener('click', function () {
-            document.getElementById('profile-modal').style.display = 'none'; // Cache le modal
-        });
-
-        //  fermer le modal en cliquant à l'extérieur
-        window.addEventListener('click', function (event) {
-            const modal = document.getElementById('profile-modal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    </script>
 
     <!--============================== SECTION PROJET ================================-->
 
@@ -415,28 +375,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="js/script.js"></script>
-</body>
-
-</html>
-
-
-
-
 <svg id="progress-circle" width="100" height="100" viewBox="0 0 100 100" style="cursor: pointer;">
     <!-- Définitions de dégradé -->
     <defs>
@@ -462,28 +400,11 @@
            x="35" y="35" width="30" height="30" />
 </svg>
 
-<script>
-    document.getElementById('progress-circle').addEventListener('click', function() {
-        // Défilement vers le bas avec un comportement fluide
-        window.scrollBy({
-            top: window.innerHeight, // Descend d'une hauteur d'écran
-            behavior: 'smooth' // Effet de défilement fluide
-        });
-    });
-
-    // Progression du cercle au défilement
-    window.addEventListener('scroll', function() {
-        var progressCircle = document.getElementById('progress');
-        var scrollPosition = window.pageYOffset; // Position de défilement actuelle
-        var maxScroll = document.body.scrollHeight - window.innerHeight; // Défilement maximal
-        var scrollPercentage = (scrollPosition / maxScroll) * 100; // Pourcentage de défilement
-
-        // Calculer la longueur du contour à afficher
-        var circumference = 283; 
-        var offset = circumference - (scrollPercentage / 100) * circumference;
-            progressCircle.style.strokeDashoffset = offset;
-    });
-</script>
 
 
+<script src="js/script.js"></script>
 
+
+</body>
+
+</html>
