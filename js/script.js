@@ -1,11 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector("header");
-    if (!header) {
-        console.error("L'élément <header> n'a pas été trouvé.");
-    }
 
     window.addEventListener("scroll", function () {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 50) { // Si on défile plus de 50px
             header.classList.add("scrolled");
         } else {
             header.classList.remove("scrolled");
@@ -13,38 +10,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
+// Sélectionner les éléments du menu burger et du menu de navigation
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links li');
 
-if (!burger || !navLinks || navItems.length === 0) {
-    console.error("Un des éléments nécessaires pour le menu burger n'a pas été trouvé.");
-} else {
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('active');
+// Ajouter l'événement pour le menu burger
+burger.addEventListener('click', () => {
+    // Ajouter ou enlever la classe active pour ouvrir/fermer le menu
+    navLinks.classList.toggle('active');
 
-        if (!navLinks.classList.contains('active')) {
-            navItems.forEach(item => {
-                item.style.animation = 'none';
-            });
-        } else {
-            navItems.forEach((item, index) => {
-                item.style.animation = `slideIn 0.5s forwards ${index * 0.1}s`;
-            });
-        }
-    });
-}
+    // Ajouter ou enlever la classe 'active' pour le burger (transforme en X)
+    burger.classList.toggle('active');
 
-
+    // Ajouter une animation de "slide" pour les éléments du menu
+    if (!navLinks.classList.contains('active')) {
+        navItems.forEach(item => {
+            item.style.animation = 'none'; // Réinitialiser les animations
+        });
+    } else {
+        navItems.forEach((item, index) => {
+            item.style.animation = `slideIn 0.5s forwards ${index * 0.1}s`; // Animation du menu
+        });
+    }
+});
 
 document.getElementById('github-icon').addEventListener('click', function (event) {
-    event.preventDefault();
+    event.preventDefault(); // pour empêcher la redirection par défaut du lien
     const modal = document.getElementById('profile-modal');
-    modal.style.display = 'block';
+    modal.style.display = 'block'; // pour afficher le modal
 
+    // Appel à l'API GitHub pour récupérer les informations de l'utilisateur
     fetch('https://api.github.com/users/SafiDial')
         .then(response => {
             if (!response.ok) {
@@ -53,6 +49,7 @@ document.getElementById('github-icon').addEventListener('click', function (event
             return response.json();
         })
         .then(data => {
+            // Remplir les informations dans le modal
             document.getElementById('avatar').src = data.avatar_url || '';
             document.getElementById('username').textContent = data.login || 'Nom d’utilisateur indisponible';
             document.getElementById('location').textContent = data.location || 'Localisation non renseignée';
@@ -62,4 +59,38 @@ document.getElementById('github-icon').addEventListener('click', function (event
             console.error('Erreur :', error);
             alert("Impossible de charger les données GitHub. Veuillez réessayer plus tard.");
         });
+});
+
+// Gestion de la fermeture du modal
+document.getElementById('close-modal').addEventListener('click', function () {
+    document.getElementById('profile-modal').style.display = 'none'; // Cache le modal
+});
+
+//  fermer le modal en cliquant à l'extérieur
+window.addEventListener('click', function (event) {
+    const modal = document.getElementById('profile-modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+document.getElementById('progress-circle').addEventListener('click', function() {
+    // Défilement vers le bas avec un comportement fluide
+    window.scrollBy({
+        top: window.innerHeight, // Descend d'une hauteur d'écran
+        behavior: 'smooth' // Effet de défilement fluide
+    });
+});
+
+// Progression du cercle au défilement
+window.addEventListener('scroll', function() {
+    var progressCircle = document.getElementById('progress');
+    var scrollPosition = window.pageYOffset; // Position de défilement actuelle
+    var maxScroll = document.body.scrollHeight - window.innerHeight; // Défilement maximal
+    var scrollPercentage = (scrollPosition / maxScroll) * 100; // Pourcentage de défilement
+
+    // Calculer la longueur du contour à afficher
+    var circumference = 283;
+    var offset = circumference - (scrollPercentage / 100) * circumference;
+    progressCircle.style.strokeDashoffset = offset;
 });

@@ -72,6 +72,26 @@ font-size: 30px;
   -webkit-background-clip: text;
   box-shadow: 0 0 1px #FFA500;
 }
+header {
+  background-color: #333;
+  padding: 15px;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav .menu li {
+  margin: 0 15px;
+}
+
+nav .menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+}
 
 .nav-links a:hover {
   color: transparent;
@@ -445,8 +465,6 @@ font-size: 30px;
   transform: scaleX(1);
 }
 
-
-
 /* Icônes sociales */
 .social-icons {
   display: flex;
@@ -497,6 +515,52 @@ font-size: 30px;
   transform: scale(1.1);
 }
 
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+  .cta {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cta button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-icons .icon i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .social-icons .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-icons .icon i {
+    font-size: 16px;
+  }
+}
+
+
+
 .modal {
   display: none;
   position: fixed;
@@ -534,26 +598,7 @@ font-size: 30px;
     font-size: 24px;
 }
 
-header {
-  background-color: #333;
-  padding: 15px;
-}
 
-nav .menu {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-nav .menu li {
-  margin: 0 15px;
-}
-
-nav .menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 19px;
-}
 
 
 @media (max-width: 768px) {
@@ -1460,7 +1505,6 @@ p {
 }
 
 #engagements h1 {
-  color: #FFD700;
   margin: 30px auto;
   width: 50%;
   text-align: center;
@@ -1470,6 +1514,7 @@ p {
   letter-spacing: 5px;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
+  color: #FFD700;
 }
 
 #engagements .container {
@@ -1583,8 +1628,18 @@ p {
   }
 }
 
+@media (max-width: 480px) {
+  
+  
+  #engagements h1 {
+    width: 90%;  
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 8px;
+}
 
-
+}
 
 
 
