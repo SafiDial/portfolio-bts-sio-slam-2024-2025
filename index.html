@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez le portfolio de Safiatou Diallo, mettant en avant ses compétences, ses projets et ses réalisations en développement web, design et plus encore.">
+    <meta name="description"
+        content="Découvrez le portfolio de Safiatou Diallo, mettant en avant ses compétences, ses projets et ses réalisations en développement web, design et plus encore.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Portfolio - Safiatou Diallo</title>
@@ -45,7 +46,17 @@
             <h1>Bienvenue sur mon Portfolio</h1>
             <p>Je suis Safiatou DIALLO, étudiante en deuxième année de BTS SIO option SLAM.</p>
             <br>
-            <a href="CV-Safiatou-DIALLO.pdf" class="btn" download>Voir mon CV</a>
+            <button id="openModalBtn" class="cv-link">Voir mon CV</button>
+            <div id="modalcv" class="modalcv">
+                <div class="modalcv-content">
+                    <h3>MON CV </h3>
+                    <iframe src="Mon cv safiatou Diallo.pdf"></iframe>
+                    <br>
+                    <a href="Mon cv safiatou Diallo.pdf" download class="button-59 download-btn">Télécharger</a>
+                    <button id="closeModalBtn" class="button-59 close-btn">Fermer</button>
+
+                </div>
+            </div>
         </div>
     </section>
     <div class="sleek-scrolling-bar">
@@ -54,6 +65,7 @@
             stages, projets collaboratifs ou alternance, pour enrichir mes compétences et contribuer à des projets
             innovants.</p>
     </div>
+
 
     <!--============================== SECTION A PROPOS ================================-->
 
@@ -92,7 +104,7 @@
         </div>
     </section>
 
-  
+
     <!--============================== SECTION PROJET ================================-->
 
     <section id="projets" class="projects">
@@ -303,12 +315,12 @@
         <div id="description"></div>
     </section>
 
- 
+
     <!--=========================== SECTIONS EXPERIENCES =================================-->
 
     <section id="experiences" class="experience-section">
         <h2>Expériences PROFESSIONNELLES </h2>
-        
+
         <div class="experience-container">
             <div class="experience">
                 <h3>Stage chez VNB-IT</h3>
@@ -319,23 +331,26 @@
                     <li>Développement d'un site vitrine sur <span class="tool">WordPress</span></li>
                     <li>Travail sur un site RISE avec <span class="tool">Node.js</span> et autres technologies</li>
                 </ul>
-                <p><span class="highlight">Outils utilisés :</span> <span class="tool">Figma, WordPress, Node.js</span></p>
+                <p><span class="highlight">Outils utilisés :</span> <span class="tool">Figma, WordPress, Node.js</span>
+                </p>
             </div>
-            
+
             <div class="experience">
                 <h3>Stage chez ITIC Paris</h3>
                 <p><span class="highlight">Période :</span> 04 novembre - 17 décembre 2024</p>
                 <p><span class="highlight">Tâches effectuées :</span></p>
                 <ul>
                     <li>Création d'une maquette</li>
-                    <li>Développement d'un site web de fast-food en <span class="tool">HTML, CSS et JavaScript</span></li>
+                    <li>Développement d'un site web de fast-food en <span class="tool">HTML, CSS et JavaScript</span>
+                    </li>
                     <li>Déploiement du site sur <span class="tool">GitHub</span></li>
                 </ul>
-                <p><span class="highlight">Outils utilisés :</span> <span class="tool">HTML, CSS, JavaScript, GitHub</span></p>
+                <p><span class="highlight">Outils utilisés :</span> <span class="tool">HTML, CSS, JavaScript,
+                        GitHub</span></p>
             </div>
         </div>
     </section>
-    
+
     <!--=========================== SECTIONS ENGAGEMENTS =================================-->
 
 
@@ -348,10 +363,12 @@
                         <h2><img src="favicon/solidarite.png" alt="heart"> Missions Humanitaires</h2>
                         <div class="engagements-column">
                             <div class="engagement yellow">
-                                <img src="favicon/journee-mondiale-de-lhumanitaire.png" alt="team"> Membre de l'association humanitaire ITIC Paris
+                                <img src="favicon/journee-mondiale-de-lhumanitaire.png" alt="team"> Membre de
+                                l'association humanitaire ITIC Paris
                             </div>
                             <div class="engagement yellow">
-                                <img src="favicon/orphelin.png" alt="child"> Bénévole pour les orphelins en Côte d'Ivoire
+                                <img src="favicon/orphelin.png" alt="child"> Bénévole pour les orphelins en Côte
+                                d'Ivoire
                             </div>
                         </div>
                     </div>
@@ -359,10 +376,12 @@
                         <h2><img src="favicon/connexion.png" alt="briefcase"> Autres Engagements</h2>
                         <div class="engagements-column">
                             <div class="engagement purple">
-                                <img src="favicon/robot.png" alt="robot"> Membre de l'Association de Robotique à CESI Brest
+                                <img src="favicon/robot.png" alt="robot"> Membre de l'Association de Robotique à CESI
+                                Brest
                             </div>
                             <div class="engagement purple">
-                                <img src="favicon/eleves.png" alt="organization"> Secrétaire National de l'AEEGCI en Côte d'Ivoire
+                                <img src="favicon/eleves.png" alt="organization"> Secrétaire National de l'AEEGCI en
+                                Côte d'Ivoire
                             </div>
                         </div>
                     </div>
@@ -373,7 +392,7 @@
             </div>
         </div>
     </section>
-    
+
     <!--=========================== FOOTER  =================================-->
 
     <footer class="custom-footer">
@@ -393,9 +412,9 @@
                 </div>
             </div>
         </div>
-    
+
         <hr class="footer-divider">
-    
+
         <div class="footer-middle">
             <div class="footer-links">
                 <h4>Liens utiles</h4>
@@ -409,17 +428,19 @@
             <div class="footer-social">
                 <h4>Suivez-moi</h4>
                 <ul>
-                    <li><a href="https://www.linkedin.com" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank" class="linkedin"><i
+                                class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com" target="_blank" class="github"><i class="fab fa-github"></i></a>
+                    </li>
                 </ul>
             </div>
-        </div>   
+        </div>
         <div class="footer-final">
             <p>&copy; Safiatou DIALLO. Tous droits réservés.</p>
         </div>
     </footer>
-    
-    
+
+
     <!--=========================== CERCLE DE PROGRESSION =================================-->
 
     <svg id="progress-circle" width="100" height="100" viewBox="0 0 100 100" style="cursor: pointer;">
@@ -431,21 +452,14 @@
         </defs>
         <!-- Cercle de fond -->
         <circle cx="50" cy="50" r="45" stroke="#000" stroke-width="10" fill="none" />
-         <!-- Cercle de progression -->
-        <circle id="progress" cx="50" cy="50" r="45" 
-            stroke="url(#gradient)" 
-            stroke-width="10" 
-            fill="none" 
-            stroke-dasharray="283" 
-            stroke-dashoffset="283" />
-         <!-- Icône au centre -->
+        <!-- Cercle de progression -->
+        <circle id="progress" cx="50" cy="50" r="45" stroke="url(#gradient)" stroke-width="10" fill="none"
+            stroke-dasharray="283" stroke-dashoffset="283" />
+        <!-- Icône au centre -->
         <image href="favicon/fleche-vers-le-bas.png" x="35" y="35" width="30" height="30" />
     </svg>
-    
-<script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
-
-
-

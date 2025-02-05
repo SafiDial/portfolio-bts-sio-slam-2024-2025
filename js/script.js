@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//======================== Gestion du menu burger =======================\\
+//============================= Gestion du menu burger ================================\\
 
 // Sélectionner les éléments du menu burger et du menu de navigation
 const burger = document.querySelector('.burger');
@@ -38,6 +38,25 @@ burger.addEventListener('click', () => {
             item.style.animation = `slideIn 0.5s forwards ${index * 0.1}s`; // Animation du menu
         });
     }
+});
+
+//========================= Affichage du cv dans un modal ======================\\
+
+document.addEventListener('DOMContentLoaded', function() {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const modalcv = document.getElementById('modalcv');
+
+    openModalBtn.addEventListener('click', function() {
+        modalcv.style.display = 'flex';
+    });
+
+    closeModalBtn.addEventListener('click', function() {
+        modalcv.style.display = 'none';
+    });
+
+    // Masquer la modal au chargement de la page
+    modalcv.style.display = 'none';
 });
 
 //========================= Affichage des informations GitHub dans un modal ======================\\
