@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV</title>
+    <style>
+        :root {
+            --bg-light: #f4f4f4;
+            --bg-dark: #121212;
+            --text-light: #333;
+            --text-dark: #fff;
+            --card-light: #fff;
+            --card-dark: #1e1e1e;
+            --shadow-light: rgba(0, 0, 0, 0.2);
+            --shadow-dark: rgba(255, 255, 255, 0.2);
+            --btn-bg: linear-gradient(45deg, #ff416c, #ff4b2b);
+            --btn-bg-hover: linear-gradient(45deg, #ff4b2b, #ff416c);
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        .cv-container {
+            background: var(--card-light);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px var(--shadow-light);
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            max-width: 90%;
+        }
+
+        body.dark-mode .cv-container {
+            background: var(--card-dark);
+            box-shadow: 0 0 20px var(--shadow-dark);
+        }
+
+        .cv-container:hover {
+            transform: scale(1.05);
+        }
+
+        .cv-link {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 18px;
+            color: white;
+            background: var(--btn-bg);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .cv-link:hover {
+            background: var(--btn-bg-hover);
+            transform: scale(1.1);
+        }
+
+        /* Mode Dark Toggle */
+        .toggle-mode {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background: #444;
+            color: white;
+        }
+
+        body.dark-mode .toggle-mode {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Pop-up CV */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: var(--card-light);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 0 20px var(--shadow-light);
+            transition: background 0.3s ease;
+        }
+
+        body.dark-mode .modal-content {
+            background: var(--card-dark);
+            box-shadow: 0 0 20px var(--shadow-dark);
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        body.dark-mode .close-btn {
+            background: #fff;
+            color: #000;
+        }
+
+        .download-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .modal-content iframe {
+                height: 300px;
+            }
+            .cv-container {
+                padding: 15px;
+            }
+            .cv-link {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="toggle-mode" onclick="toggleMode()">🌙 Mode Sombre</button>
+
+    <div class="cv-container">
+        <h2>Voir mon CV</h2>
+        <button class="cv-link" onclick="openModal()">Accéder à mon CV</button>
+    </div>
+
+    <!-- Pop-up pour afficher le CV -->
+    <div id="cvModal" class="modal">
+        <div class="modal-content">
+            <h3>Mon CV</h3>
+            <iframe src="Mon cv safiatou Diallo.pdf"></iframe>
+            <br>
+            <a href="Mon cv safiatou Diallo.pdf" download class="download-btn">Télécharger</a>
+            <button class="close-btn" onclick="closeModal()">Fermer</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("cvModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("cvModal").style.display = "none";
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle("dark-mode");
+            const btn = document.querySelector(".toggle-mode");
+            btn.textContent = document.body.classList.contains("dark-mode") ? "☀️ Mode Clair" : "🌙 Mode Sombre";
+        }
+    </script>
+
+</body>
+</html>
