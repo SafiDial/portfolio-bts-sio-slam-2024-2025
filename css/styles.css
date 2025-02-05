@@ -12,6 +12,7 @@
   --hover-gradient-color-2: #f9ff47;
   --box-shadow-color: #FFA500;
   --fire-effect-color: #FF4500;
+  --text-colorlogo:#ffffff;
 }
 
 * {
@@ -52,7 +53,7 @@ header.scrolled {
 }
 
 .logo {
-  text-shadow: -1px -1px 0 var(--text-color), -1px 2px 0 var(--text-color), 1px 1px 10px #141414;
+  text-shadow: -1px -1px 0 var(--text-colorlogo), -1px 2px 0 var(--text-colorlogo), 1px 1px 10px #141414;
   color: var(--header-bg-color);
   font-size: 30px;
 }
