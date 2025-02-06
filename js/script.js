@@ -42,22 +42,7 @@ burger.addEventListener('click', () => {
 
 //========================= Affichage du cv dans un modal ======================\\
 
-document.addEventListener('DOMContentLoaded', function() {
-    const openModalBtn = document.getElementById('openModalBtn');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const modalcv = document.getElementById('modalcv');
 
-    openModalBtn.addEventListener('click', function() {
-        modalcv.style.display = 'flex';
-    });
-
-    closeModalBtn.addEventListener('click', function() {
-        modalcv.style.display = 'none';
-    });
-
-    // Masquer la modal au chargement de la page
-    modalcv.style.display = 'none';
-});
 
 //========================= Affichage des informations GitHub dans un modal ======================\\
 
