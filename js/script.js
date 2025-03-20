@@ -40,7 +40,13 @@ burger.addEventListener('click', () => {
     }
 });
 
-//========================= Affichage du cv dans un modal ======================\\
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('active'); // Ferme le menu
+        burger.classList.remove('active'); // Réinitialise l'icône du burger
+    });
+});
+
 
 
 
