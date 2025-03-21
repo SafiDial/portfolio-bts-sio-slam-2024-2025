@@ -38,12 +38,7 @@
 
     <!--============================== SECTION PROJET JAVA ================================-->
     <section id="ProjetJAVA">
-        <div class="image-container">
-            <img src="../css/images/MCD.png" alt="Description de l'image">
-            <h3>MCD (Modèle Conceptuel de Données)</h3>
-        </div>
-
-        <div class="contente-container">
+        <div class="presentation-container">
             <h2>Présentation de projet</h2>
             <p>
                 Ce projet est un projet Java conçu pour gérer les ligues. Il permet de faciliter la gestion des membres,
@@ -59,22 +54,19 @@
                 </a>
             </div>
         </div>
-
-        <div class="heuristique-container">
-            <div class="heuristique-content">
-                <h2>Arbre Heuristique du Projet</h2>
-                <p>
-                    L'arbre heuristique représente la structure globale du projet. Il montre les différentes composantes du système, 
-                    telles que la gestion des ligues, des membres, des équipes et des événements. Chaque branche correspond à une 
-                    fonctionnalité spécifique du projet.
-                </p>
+    
+        <div class="content-row">
+            <div class="image-container">
+                <img src="../css/images/MCD.png" alt="MCD (Modèle Conceptuel de Données)">
+                <h3>MCD (Modèle Conceptuel de Données)</h3>
             </div>
-            <div class="heuristique-image">
+    
+            <div class="image-container">
                 <img src="../css/images/Arbre_Heuristique.png" alt="Arbre Heuristique du Projet">
+                <h3>Arbre Heuristique du Projet</h3>
             </div>
         </div>
-
-        <!-- Trois captures d'écran du terminal sur la même ligne -->
+    
         <div class="screenshots-container">
             <div class="screenshot-item">
                 <img src="../css/images/CaptureAcceuil.png" alt="Capture d'écran du terminal 1">
@@ -89,95 +81,46 @@
                 <p>Gestion des employés</p>
             </div>
         </div>
+    </section>
+    
 
         
         <!--============================== SECTION TRAVAIL ACCOMPLI ================================-->
         <section id="travail-accompli">
-            <div class="content-container">
-                <h2>Travail Accompli sur l'Application "Maison de Ligue"</h2>
-                <p>
-                    Voici un aperçu détaillé des travaux réalisés sur l'application "Maison de Ligue" en Java, avec des explications à chaque étape.
-                </p>
-
-                <div class="step-container">
-                    <h3>1. Représentation Graphique des Menus</h3>
-                    <p>
-                        <strong>Exécution de l'application :</strong> L'application a été lancée avec succès, permettant d'observer les menus affichés dans la ligne de commande.
-                    </p>
-                    <p>
-                        <strong>Création de l'arbre heuristique :</strong> Un graphe a été créé où chaque menu et chaque option est représenté par un nœud. Les arêtes ont été utilisées pour représenter l'imbrication des nœuds.
-                    </p>
-                    <p>
-                        <strong>Image de l'arbre heuristique :</strong> Une image de l'arbre heuristique a été générée et déposée dans le dépôt du projet avec un commit.
-                    </p>
+            <div class="container">
+                <div class="title">
+                    Travail Accompli sur l'Application "Maison de Ligue"
                 </div>
-
-                <div class="step-container">
-                    <h3>2. Modèle Conceptuel de Données (MCD)</h3>
-                    <p>
-                        <strong>Analyse des données :</strong> Les données affichées en ligne de commande et le code de la couche métier ont été analysés pour créer un MCD.
-                    </p>
-                    <p>
-                        <strong>Création du MCD :</strong> Les entités et leurs relations ont été représentées. Les attributs <code>dateArrivee</code> et <code>dateDepart</code> ont été ajoutés à l'entité <code>Employe</code>.
-                    </p>
+                <div class="item">
+                    <h3>Représentation Graphique des Menus</h3>
+                    <p>L'application a été lancée avec succès, permettant d'observer les menus affichés dans la ligne de commande.</p>
                 </div>
-
-                <div class="step-container">
-                    <h3>3. Modification de la Couche Métier</h3>
-                    <p>
-                        <strong>Ajout de variables d'instance :</strong> Des variables de type <code>LocalDate</code> pour <code>dateArrivee</code> et <code>dateDepart</code> ont été ajoutées.
-                    </p>
-                    <p>
-                        <strong>Constructeur, getters, setters :</strong> Un constructeur a été ajouté pour initialiser les dates. Des getters et setters ont été implémentés pour les dates.
-                    </p>
-                    <p>
-                        <strong>Gestion des exceptions :</strong> Des exceptions sont déclenchées en cas de dates incohérentes (par exemple, <code>dateDepart</code> avant <code>dateArrivee</code>).
-                    </p>
+                <div class="item">
+                    <h3>Modèle Conceptuel de Données (MCD)</h3>
+                    <p>Les données affichées en ligne de commande et le code de la couche métier ont été analysés pour créer un MCD.</p>
                 </div>
-
-                <div class="step-container">
-                    <h3>4. Tests Unitaires</h3>
-                    <p>
-                        <strong>Tests pour les dates :</strong> Des tests unitaires ont été écrits pour vérifier la cohérence des dates.
-                    </p>
-                    <p>
-                        <strong>Tests pour les setters :</strong> Des tests unitaires ont été ajoutés pour vérifier le bon fonctionnement des setters.
-                    </p>
+                <div class="item">
+                    <h3>Modification de la Couche Métier</h3>
+                    <p>Des variables de type LocalDate pour dateArrivee et dateDepart ont été ajoutées.</p>
                 </div>
-
-                <div class="step-container">
-                    <h3>5. Gestion des Objets et Administrateurs</h3>
-                    <p>
-                        <strong>Suppression d'objet :</strong> Le comportement lors de la suppression d'un objet a été vérifié.
-                    </p>
-                    <p>
-                        <strong>Modification de l'administrateur :</strong> Le comportement lors de la modification de l'administrateur d'une ligue a été vérifié.
-                    </p>
+                <div class="item">
+                    <h3>Tests Unitaires</h3>
+                    <p>Des tests unitaires ont été écrits pour vérifier la cohérence des dates et le bon fonctionnement des setters.</p>
                 </div>
-
-                <div class="step-container">
-                    <h3>6. Script de Création de Tables</h3>
-                    <p>
-                        <strong>Création du script SQL :</strong> Un fichier <code>.sql</code> contenant les instructions de création des tables a été créé et versionné dans le dépôt du projet.
-                    </p>
+                <div class="item">
+                    <h3>Gestion des Objets et Administrateurs</h3>
+                    <p>Le comportement lors de la suppression d'un objet et la modification de l'administrateur d'une ligue a été vérifié.</p>
                 </div>
-
-                <div class="step-container">
-                    <h3>7. Modification du Dialogue en Ligne de Commande</h3>
-                    <p>
-                        <strong>Sélection d'un employé :</strong> La possibilité de sélectionner un employé avant de choisir de le modifier ou de le supprimer a été ajoutée.
-                    </p>
-                    <p>
-                        <strong>Modification de l'administrateur :</strong> La possibilité de modifier l'administrateur d'une ligue a été ajoutée.
-                    </p>
-                    <p>
-                        <strong>Saisie des dates :</strong> La saisie des dates de l'employé avec traitement des erreurs a été implémentée.
-                    </p>
-                    <p>
-                        <strong>Mise à jour de l'arbre heuristique :</strong> L'arbre heuristique a été mis à jour pour refléter ces modifications.
-                    </p>
+                <div class="item">
+                    <h3>Script de Création de Tables</h3>
+                    <p>Un fichier .sql contenant les instructions de création des tables a été créé et versionné dans le dépôt du projet.</p>
+                </div>
+                <div class="item">
+                    <h3>Modification du Dialogue en Ligne de Commande</h3>
+                    <p>La possibilité de sélectionner un employé avant de choisir de le modifier ou de le supprimer a été ajoutée.</p>
                 </div>
             </div>
+            
         </section>
     </section>
 
