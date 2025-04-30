@@ -73,7 +73,7 @@ header.scrolled {
 .nav-links a {
   text-decoration: none;
   color: var(--text-color);
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   padding: 10px 15px;
   font-weight: bold;
