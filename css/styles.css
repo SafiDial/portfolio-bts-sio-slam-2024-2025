@@ -55,13 +55,13 @@ header.scrolled {
 .logo {
   text-shadow: -1px -1px 0 var(--text-colorlogo), -1px 2px 0 var(--text-colorlogo), 1px 1px 10px #141414;
   color: var(--header-bg-color);
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   position: relative;
   z-index: 5;
 }
@@ -91,7 +91,7 @@ header.scrolled {
   background: linear-gradient(45deg, var(--hover-gradient-color-1), var(--hover-gradient-color-2));
   background-clip: text;
   -webkit-background-clip: text;
-  box-shadow: 0 0 15px var(--hover-gradient-color-1), 0 0 20px var(--hover-gradient-color-2);
+  box-shadow: 0 0 10px var(--hover-gradient-color-1), 0 0 15px var(--hover-gradient-color-2);
 }
 
 .nav-links a:before,
@@ -178,6 +178,8 @@ header.scrolled {
     display: none;
   }
 }
+
+
 /* ========================== STYLE ACCEUIL ============================= */
 #accueil {
   --primary-color: #FFDF00;
@@ -350,7 +352,6 @@ header.scrolled {
   }
 }
 
-/* ========================== MODAL POUR LE CV ============================= */
 
 
 /* ========================== BARRE VIOLETTE DEFILENTE ============================= */
@@ -668,7 +669,7 @@ header.scrolled {
   --border-color: rgba(0, 0, 0, 0.1);
   --hover-color: #fafafa;
   --link-color: #000000;
-  --link-hover-color: #FFD700;
+  --link-hover-color: #000000;
   --footer-color: #e31b23;
   --button-background-color: #FCFCFD;
   --button-text-color: #36395A;
@@ -1673,7 +1674,7 @@ p {
 
   .image-container.engagement-image {
     width: 80%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .engagement {
@@ -1686,9 +1687,109 @@ p {
     width: 90%;
     font-size: 20px;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding: 8px;
   }
+}
+
+
+/* ============================ SECTION VEILLE TECHNO =========================== */
+
+#ia-veilles {
+  --primary-color: #ffd700;
+  --text-color: #f9f9f9;
+  --background-color: #0e0e0e;
+  --background-primary-color: #2b2b2b;
+  --background-secondary-color: #1c1c1c;
+  --secondary-color: #9b59b6;
+  --text-secondary-color: #dddddd;
+  
+  padding: 60px 20px;
+  color: var(--text-color);
+  font-family: 'segoe ui', sans-serif;
+}
+
+.ia-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* titre principal */
+.ia-title {
+  font-size: 30px;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+
+  margin: 30px auto;
+  width: 90%;
+  text-align: center;
+  padding: 15px;
+  text-transform: uppercase;
+   
+}
+
+/* grille des blocs */
+.ia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* blocs */
+.ia-block {
+  background: linear-gradient(145deg, var(--background-secondary-color), var(--background-primary-color));
+  padding: 25px;
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.ia-block:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(155, 89, 182, 0.4);
+}
+
+/* titres des blocs */
+.ia-block h3 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* textes des blocs */
+.ia-block p {
+  color: var(--text-secondary-color);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* lien en bas */
+.ia-link {
+  display: inline-block;
+ padding: 12px 24px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.ia-link:hover {
+  background-color: var(--primary-color);
+  color: #111;
+  transform: scale(1.05);
 }
 
 
